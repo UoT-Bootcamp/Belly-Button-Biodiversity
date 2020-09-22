@@ -1,4 +1,4 @@
-
+// Change the demographic Info
 function demographicInfo(sample){
   var metadataInfo = d3.select("#sample-metadata");
   d3.json("data/samples.json").then((incomingData) => {
@@ -13,42 +13,46 @@ function demographicInfo(sample){
 });
 };
 
-function pieChart(barId){
+// Build the bar chart
+function barChart(barId){
   d3.json("data/samples.json").then(incomingData => {
     
     var sampleData = incomingData.samples;
     var sampleList = sampleData.filter(sampleObject => sampleObject.id == barId);    
-    // console.log(sampleList);
     var finalList = sampleList[0];
 
-    // console.log(finalList);
-    // var finalSlice = sampleList.slice(0, 10).reverse();
-    // console.log(finalSlice)
+    // var otu_id = sampleData.id;
+
+    // console.log(sampleList);
+
     var otuIds = finalList.otu_ids.slice(0, 10).reverse();
     var sampleValues = finalList.sample_values.slice(0, 10).reverse();
     var otuLables = finalList.otu_labels.slice(0, 10).reverse();
 
-    // console.log(otuIds)
-    // console.log(sampleValues)
-    // console.log(otuLables)
+    var finalOtuIds = otuIds.map(d => 'OTU' + ' ' + d);
+    
     trace = {
       type: "bar",
       x: sampleValues,
-      y: `OTU ${otuIds}`,
+      y: finalOtuIds,
       // value: sampleValues,
       // label: otuIds,
-      text: otuLables
+      text: otuLables,
+      orientation: "h"
     }
 
-    //  var layout = {
-    //    yaxis: {
-    //      title: `OTU ${otuIds}`
-    //    } 
-    //  }
-    Plotly.newPlot("bar", [trace]);
+     var layout = {
+      title: "Top 10 OTUs in Subject ID No.- " + barId,
+       xaxis: {
+         title: "Sample Values"
+       } 
+     }
+
+    Plotly.newPlot("bar", [trace], layout);
   });
 }
 
+// Build bubble chart
 function bubbleChart(bubbleId){
   d3.json("data/samples.json").then(incomingData => {
     
@@ -60,14 +64,12 @@ function bubbleChart(bubbleId){
     var sampleValues = finalList.sample_values;
     var otuLables = finalList.otu_labels;
   
-
     trace = {
       mode: "markers",
       marker: {
         color: otuIds,
         size: sampleValues
         },
-      
       x: otuIds,
       y: sampleValues,
       size: sampleValues,
@@ -75,9 +77,49 @@ function bubbleChart(bubbleId){
       sizemode: 'area'
     };
 
-    Plotly.newPlot("bubble", [trace]);
+    var layout = {
+      title: "Bubble Chart for Subject ID No.- " + bubbleId,
+      xaxis : {
+        title: "OTU ID"
+      },
+      yaxis : {
+        title: "Sample Values"
+      }
+    };
+
+    Plotly.newPlot("bubble", [trace], layout);
   });
 };
+
+// Initiate the dashboard
+function init(){
+  var selector = d3.select("#selDataset");
+  d3.json("data/samples.json").then(incomingData => {
+    var sampleNames = incomingData.names;
+    sampleNames.forEach(sample => {
+      selector.append("option").text(sample).property("value", sample);
+    });
+    var firstSample = sampleNames[0];
+   
+    demographicInfo(firstSample);
+    barChart(firstSample);
+    // gaugeChart(firstSample);
+    bubbleChart(firstSample);
+   
+  });
+};
+
+// This function change on change of OTU ID
+function optionChanged(changedSample){
+  demographicInfo(changedSample);
+  barChart(changedSample);
+  // gaugeChart(changedSample);
+  bubbleChart(changedSample);
+};
+
+init()
+
+
 
 // function gaugeChart(gaugeID){
 //   d3.json("data/samples.json").then(incomingData => {
@@ -130,37 +172,3 @@ function bubbleChart(bubbleId){
 
 //   });
 // }
-
-
-function init(){
-  var selector = d3.select("#selDataset");
-  d3.json("data/samples.json").then(incomingData => {
-    var sampleNames = incomingData.names;
-    sampleNames.forEach(sample => {
-      selector.append("option").text(sample).property("value", sample);
-      
-    });
-    var firstSample = sampleNames[0];
-    // console.log(firstSample);
-    demographicInfo(firstSample);
-    pieChart(firstSample);
-    gaugeChart(firstSample);
-    bubbleChart(firstSample);
-    gaugeChart(firstSample);
-
-    
-
-    
-  });
-}
-
-function optionChanged(changedSample){
-  demographicInfo(changedSample);
-  pieChart(changedSample);
-  gaugeChart(changedSample);
-  bubbleChart(changedSample);
-  gaugeChart(changedSample);
-
-}
-
-init()

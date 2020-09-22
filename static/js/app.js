@@ -40,6 +40,11 @@ function pieChart(barId){
       text: otuLables
     }
 
+    //  var layout = {
+    //    yaxis: {
+    //      title: `OTU ${otuIds}`
+    //    } 
+    //  }
     Plotly.newPlot("bar", [trace]);
   });
 }
@@ -74,27 +79,27 @@ function bubbleChart(bubbleId){
   });
 };
 
-function gaugeChart(gaugeID){
-  d3.json("data/samples.json").then(incomingData => {
+// function gaugeChart(gaugeID){
+//   d3.json("data/samples.json").then(incomingData => {
     
-    var sampleData = incomingData.samples;
-    var sampleList = sampleData.filter(sampleObject => sampleObject.id == bubbleId);    
-    var finalList = sampleList[0];
+//     var sampleData = incomingData.samples;
+//     var sampleList = sampleData.filter(sampleObject => sampleObject.id == gaugeId);    
+//     var finalList = sampleList[0];
 
-    var otuIds = finalList.otu_ids;
-    var sampleValues = finalList.sample_values;
-    var otuLables = finalList.otu_labels;
+//     var otuIds = finalList.otu_ids;
+//     var sampleValues = finalList.sample_values;
+//     var otuLables = finalList.otu_labels;
 
 
 //   var data = [
 //   {
 //     type: "indicator",
 //     mode: "gauge+number+delta",
-//     value: 420,
-//     title: { text: "Speed", font: { size: 24 } },
-//     delta: { reference: 400, increasing: { color: "RebeccaPurple" } },
+//     // value: 420,
+//     title: { text: "Gauge meter", font: { size: 24 } },
+//     delta: { reference: 9, increasing: { color: "RebeccaPurple" } },
 //      gauge: {
-//       axis: { range: [null, 500], tickwidth: 1, tickcolor: "darkblue" },
+//       axis: { range: [0, 9], tickwidth: 1, tickcolor: "darkblue" },
 //       bar: { color: "darkblue" },
 //       bgcolor: "white",
 //       borderwidth: 2,
@@ -120,11 +125,11 @@ function gaugeChart(gaugeID){
 //   font: { color: "darkblue", family: "Arial" }
 // };
 
-// Plotly.newPlot('myDiv', data, layout);
+// Plotly.newPlot('gauge', data, layout);
 
 
-  });
-}
+//   });
+// }
 
 
 function init(){
@@ -141,6 +146,7 @@ function init(){
     pieChart(firstSample);
     gaugeChart(firstSample);
     bubbleChart(firstSample);
+    gaugeChart(firstSample);
 
     
 
@@ -153,6 +159,7 @@ function optionChanged(changedSample){
   pieChart(changedSample);
   gaugeChart(changedSample);
   bubbleChart(changedSample);
+  gaugeChart(changedSample);
 
 }
 

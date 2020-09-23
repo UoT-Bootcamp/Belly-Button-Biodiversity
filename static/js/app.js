@@ -10,6 +10,7 @@ function demographicInfo(sample){
     Object.entries(result).forEach(([key, value]) => {
       metadataInfo.append("h6").text(`${key} : ${value}`);
   });
+  gaugeChart(result.wfreq);
 });
 };
 
@@ -38,7 +39,8 @@ function barChart(barId){
       // value: sampleValues,
       // label: otuIds,
       text: otuLables,
-      orientation: "h"
+      orientation: "h", 
+      
     }
 
      var layout = {
@@ -68,7 +70,8 @@ function bubbleChart(bubbleId){
       mode: "markers",
       marker: {
         color: otuIds,
-        size: sampleValues
+        size: sampleValues,
+        colorscale : "Earth"
         },
       x: otuIds,
       y: sampleValues,
@@ -121,54 +124,44 @@ init()
 
 
 
-// function gaugeChart(gaugeID){
-//   d3.json("data/samples.json").then(incomingData => {
+function gaugeChart(gaugeID){
+  // d3.json("data/samples.json").then(incomingData => {
     
-//     var sampleData = incomingData.samples;
-//     var sampleList = sampleData.filter(sampleObject => sampleObject.id == gaugeId);    
-//     var finalList = sampleList[0];
+    // var sampleData = incomingData.samples;
+    // var sampleList = sampleData.filter(sampleObject => sampleObject.id == gaugeId);    
+    // var finalList = sampleList[0];
 
-//     var otuIds = finalList.otu_ids;
-//     var sampleValues = finalList.sample_values;
-//     var otuLables = finalList.otu_labels;
-
-
-//   var data = [
-//   {
-//     type: "indicator",
-//     mode: "gauge+number+delta",
-//     // value: 420,
-//     title: { text: "Gauge meter", font: { size: 24 } },
-//     delta: { reference: 9, increasing: { color: "RebeccaPurple" } },
-//      gauge: {
-//       axis: { range: [0, 9], tickwidth: 1, tickcolor: "darkblue" },
-//       bar: { color: "darkblue" },
-//       bgcolor: "white",
-//       borderwidth: 2,
-//       bordercolor: "gray",
-//       steps: [
-//         { range: [0, 250], color: "cyan" },
-//         { range: [250, 400], color: "royalblue" }
-//       ],
-//       threshold: {
-//         line: { color: "red", width: 4 },
-//         thickness: 0.75,
-//         value: 490
-//       }
-//     }
-//   }
-// ];
-
-// var layout = {
-//   width: 500,
-//   height: 400,
-//   margin: { t: 25, r: 25, l: 25, b: 25 },
-//   paper_bgcolor: "lavender",
-//   font: { color: "darkblue", family: "Arial" }
-// };
-
-// Plotly.newPlot('gauge', data, layout);
+    // var otuIds = finalList.otu_ids;
+    // var sampleValues = finalList.sample_values;
+    // var otuLables = finalList.otu_labels;
 
 
-//   });
-// }
+    var data = [
+      {
+        domain: { x: [0, 1], y: [0, 1] },
+        value: gaugeID,
+        title: { text: "Belly Button Washing Frequency" },
+        type: "indicator",
+        mode: "gauge+number",
+        // delta: { reference: 380 },
+        gauge: {
+          axis: { range: [0, 9] },
+          steps: [
+            { range: [0, 4.5], color: "lightgray" },
+            { range: [4.5, 9], color: "gray" }
+          ]
+          // threshold: {
+          //   line: { color: "red", width: 4 },
+          //   thickness: 0.75,
+          //   value: 490
+          // }
+        }
+      }
+    ];
+    
+    var layout = { width: 600, height: 450, margin: { t: 0, b: 0 } };
+    Plotly.newPlot('gauge', data, layout);
+
+
+  // });
+}

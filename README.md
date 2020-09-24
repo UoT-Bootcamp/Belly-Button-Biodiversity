@@ -31,5 +31,5 @@ The dataset reveals that a small handful of microbial species (also called opera
 
 The final dashboard created by us is below:
 
-![belly](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/Screenshots/screenshot1.png)
-![belly](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/Screenshots/screenshot2.png)
+![belly](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/Screenshots/screenshot3.png)
+

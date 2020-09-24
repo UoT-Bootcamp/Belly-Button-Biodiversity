@@ -1,8 +1,6 @@
 #dashboard-title {
     background-color: rgba(255, 127, 80, 0.644);
     background-size: cover;
-    /* background-image: url("static/images/microbes-sem.jpg"); */
-
 }
 
 .well {
@@ -12,7 +10,3 @@
 .panel {
     background-color: rgb(238, 207, 207); 
 }
-
-/* .panel-heading {
-    background-color: rgb(190, 187, 202); 
-} */

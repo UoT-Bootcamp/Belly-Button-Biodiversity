@@ -31,5 +31,9 @@ The dataset reveals that a small handful of microbial species (also called opera
 
 The final dashboard created by us is below:
 
-![belly](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/Screenshots/screenshot3.png)
+![belly](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/Screenshots/screenshot3.png)<br/>
 
+
+I have also deployed the webpage to the GitHub pages. Feel free to click the below link to visit the page:
+
+GitHub Pages link :  [Belly Button Biodiversity Dashboard](https://uot-bootcamp.github.io/Plot.ly-Challenge/)<br/>

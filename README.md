@@ -2,7 +2,7 @@
 
 ![belly](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/microbes-sem.jpg)
 
-In this assignment, we will build an interactive dashboard to explore the Belly Button Biodiversity dataset, which catalogs the microbes that colonize human navels.
+In this assignment, we will build an interactive dashboard to explore the [Belly Button Biodiversity dataset](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/data/samples.json), which catalogs the microbes that colonize human navels.
 
 The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
 
@@ -31,5 +31,5 @@ The dataset reveals that a small handful of microbial species (also called opera
 
 The final dashboard created by us is below:
 
-![belly](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/Screenshots/screenshot1.png)
-![belly](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/Screenshots/screenshot2.png)
+![belly](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/Screenshots/screenshot3.png)
+

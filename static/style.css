@@ -1,6 +1,7 @@
 #dashboard-title {
     background-color: rgba(255, 127, 80, 0.644);
     background-size: cover;
+    background-image: url("../images/microbes-sem.jpg");
 }
 
 .well {

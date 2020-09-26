@@ -1,13 +1,14 @@
 #dashboard-title {
-    background-color: rgba(255, 127, 80, 0.644);
     background-size: cover;
-    background-image: url("../images/microbes-sem.jpg");
+    background-image: url("../images/banner_image.png");
+    color: white;
 }
 
+
 .well {
-    background-color: rgb(238, 207, 207);
+    background-color: rgb(178, 171, 240);
 }
 
 .panel {
-    background-color: rgb(238, 207, 207); 
+    background-color: rgb(178, 171, 240); 
 }

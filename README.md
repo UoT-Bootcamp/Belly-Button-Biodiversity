@@ -15,6 +15,8 @@ The dataset reveals that a small handful of microbial species (also called opera
   * Use otu_ids as the labels for the bar chart.
   * Use otu_labels as the hovertext for the chart.
   
+* Created a gauge chart to plot the weekly washing frequency of the individual subject ID.
+
 * Created a bubble chart that displays each sample.
 
   * Use otu_ids for the x values.

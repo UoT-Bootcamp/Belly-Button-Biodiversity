@@ -14,8 +14,12 @@ The dataset reveals that a small handful of microbial species (also called opera
   * Use sample_values as the values for the bar chart.
   * Use otu_ids as the labels for the bar chart.
   * Use otu_labels as the hovertext for the chart.
-  
+
+![bar](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/Screenshots/bar_chart.png)<br/>
+
 * Created a gauge chart to plot the weekly washing frequency of the individual subject ID.
+
+![gauge](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/Screenshots/gauge_chart.png)<br/>
 
 * Created a bubble chart that displays each sample.
 
@@ -24,6 +28,8 @@ The dataset reveals that a small handful of microbial species (also called opera
   * Use sample_values for the marker size.
   * Use otu_ids for the marker colors.
   * Use otu_labels for the text values.
+
+![bubble](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/Screenshots/bubble_chart.png)<br/>
 
 * Displayed the sample metadata, i.e., an individual's demographic information.
 

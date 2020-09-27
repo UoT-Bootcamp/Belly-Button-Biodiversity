@@ -37,6 +37,8 @@ The dataset reveals that a small handful of microbial species (also called opera
 
 * Updated all of the plots any time that a new sample is selected.
 
+## Final Dashboard:
+
 The final dashboard created by us is below:
 
 ![belly](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/Screenshots/screenshot3.png)<br/>

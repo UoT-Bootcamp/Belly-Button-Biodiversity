@@ -1,4 +1,4 @@
-# Belly Button Biodiversity
+# Belly Button Biodiversity - Plotly Challenge
 
 ![belly](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/microbes-sem.jpg)
 

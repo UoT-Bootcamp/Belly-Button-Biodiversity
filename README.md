@@ -3,7 +3,8 @@
 ![belly](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/microbes-sem.jpg)
 
 <br>
-Click [Belly Button Biodiversity Dashboard](https://uot-bootcamp.github.io/Belly-Button-Biodiversity/) to visit the webpage:
+
+Click [Belly Button Biodiversity Dashboard](https://uot-bootcamp.github.io/Belly-Button-Biodiversity/) to visit the webpage. <br>
 
 In this assignment, we will build an interactive dashboard to explore the [Belly Button Biodiversity dataset](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/data/samples.json), which catalogs the microbes that colonize human navels.
 

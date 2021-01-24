@@ -2,6 +2,9 @@
 
 ![belly](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/microbes-sem.jpg)
 
+<br>
+Click [Belly Button Biodiversity Dashboard](https://uot-bootcamp.github.io/Belly-Button-Biodiversity/) to visit the webpage:
+
 In this assignment, we will build an interactive dashboard to explore the [Belly Button Biodiversity dataset](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/data/samples.json), which catalogs the microbes that colonize human navels.
 
 The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
@@ -44,6 +47,4 @@ The final dashboard created by us is below:
 ![belly](https://github.com/UoT-Bootcamp/Plot.ly-Challenge/blob/master/Screenshots/screenshot3.png)<br/>
 
 
-I have also deployed the webpage to the GitHub pages. Feel free to click the below link to visit the page:
 
-GitHub Pages link :  [Belly Button Biodiversity Dashboard](https://uot-bootcamp.github.io/Plot.ly-Challenge/)<br/>
